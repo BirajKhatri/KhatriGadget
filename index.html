@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Homepage</title>
+        <link href="css/index.css" rel="stylesheet" type="text/css">
+        <link href="fonts.css" rel="stylesheet">
+    </head>
+    <body  onload="initClock()">
+        <header class="site-heaader">
+            <nav class="container"><!--For navigation bar-->
+                <div class="logo"><a href="index.html">KhatriGadget</a></div>
+                <div class="main-nav" >
+                    <ul>
+                        <li>
+                            <a href="product.html" class="nav">Product</a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="nav">Blog</a>
+                        </li>
+                        <li>
+                            <a href="research.html" class="nav">Research</a>
+                        </li>
+                        <li>
+                            <a href="contactus.html" class="nav">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="content"><!--For main content-->
+                <section class="container">
+                    <h3>Welcome to Khatri Gadget</h3>
+                    <h1>Famous Brands <span class="change_content"></span></h1>
+                    <p>Contact us for all Gadgets</p>
+                    <div class="datetime">
+                        <div class="date">
+                            <span id="dayname">Day</span>,
+                            <span id="month">Month</span>
+                            <span id="daynum">00</span>,
+                            <span id="year">Year</span>
+                        </div>
+                        <div class="time">
+                            <span id="hour">00</span>:
+                            <span id="minutes">00</span>:
+                            <span id="seconds">00</span>
+                            <span id="period">AM</span>
+                        </div>
+
+                    </div>
+                </section>
+            </main>
+        </header>
+        <footer id="pageFooter"><!--For page footer-->
+            <span>Copyright KhatriGadget &copy; 2023.</span>
+            <a href="contactus.html">Contact Us</a>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" class="social" target="_blank"><img src="image/facebook.png"></a>
+                <a href="https://np.linkedin.com/" class="social" target="_blank"><img src="image/linkedin.png"></a>
+                <a href="https://www.instagram.com/?hl=en" class="social" target="_blank"><img src="image/instagram.png"></a>
+            </div>
+         </footer>
+
+         <!--Digital Clock-->
+
+        <script src="js/index.js">
+        </script>
+
+    <!--background Image changer-->
+        <script>
+            function changeBg(){
+
+                const images =[
+                    'url("image/1.jpg")',
+                    'url("image/2.jpg")',
+                    'url("image/3.jpg")',
+                    'url("image/4.jpg")',
+                ]
+            const section = document.querySelector('body');
+            const bg = images[Math.floor(Math.random() * images.length)];
+            section.style.backgroundImage = bg;
+            }
+            setInterval(changeBg,1000)
+        </script>
+
+    </body>
+</html>

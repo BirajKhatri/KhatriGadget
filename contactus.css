@@ -1,0 +1,261 @@
+*{
+    margin: 0; /* Extra margin given by Browser is neglected*/
+    padding: 0; /* Extra padding given by Browser is neglected*/
+    box-sizing: border-box;/*Container extra padding margin is added which is neglected*/
+    font-family: 'Philosopher', sans-serif;
+}
+
+
+body{  /* for tag*/
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url('../image/1.jpg');/*For gradient effect and background image*/
+    background-size:100% 100%;
+    margin: auto;
+    
+    /*For whoe background cover*/
+    background-repeat:no-repeat;
+    background-size: cover;
+    max-width: 100%;
+}
+/***************For Navigation Bar************************/
+
+nav{
+    width: 100%;
+    height:15vh;
+    background: rgba(0,0,0,0.6);
+    color:#fff;
+    display:flex;/*Side by Side  the Logo and Navigation is kept */
+    justify-content: space-between; /* Space between logo and navigation is kept */
+    align-items: center;/* All the content is aligned exactly aligned at center vetically in its padding  */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo{
+    width:25%; /* Width */
+    text-align: center;
+    font-size: 38px;
+    color:#fff    
+}
+
+.main-nav{ /*For setting overall properties like width and all of naviagtion bar*/
+    width: 40%; /*It takes about 40% space of the whole  padding*/
+    display:flex; /*It keeps them together */
+    justify-content: space-around ; /*It creates equal spacing among them whole */
+}
+
+.main-nav ul{
+    font-size: 0;
+}
+
+.main-nav li{ /*For editting and placing the main-navigation bar in correct order*/
+    display: inline-block;
+    list-style: none;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    width:25%; /* Width */
+    text-align: center;
+    font-size: 38px;
+    text-emphasis-color:#fff;
+
+}
+.logo a{
+    color:#fff;
+}
+
+.logo a:hover{
+    color:#fc6e20;
+    transition: all .5s ease;/*For Animation*/
+}
+
+.main-nav a{   /* Inside menu class a tag is accessed and editting properties of Blog Vlog buttons*/
+    color:#fff;
+    font-weight: bold;
+    width:16.66%; /* To occupy exact same width all three options*/
+}
+.main-nav a:hover{
+    color:#fc6e20;
+    transition: all .5s ease;/*For Animation*/
+}
+
+.first-child a{
+    color:#fc6e20;
+}
+.first-child a:hover{
+    color:#fff;
+    transition: all .5s ease;
+}
+
+
+/*-------------------For Main Body -------------------*/
+.contact{
+    position: relative;
+    min-height: 60vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.contact .content p {
+    font-weight: 300;
+    color: #fff;
+}
+.container2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container2 .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.box .text h3{
+    font-weight: 500;
+    color: #fc6e20;
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox .span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ .span,
+.contactForm .inputBox input:valid ~ .span,
+.contactForm .inputBox textarea:focus ~ .span,
+.contactForm .inputBox textarea:valid ~ .span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+    width: 100px;
+    background: #fc6e20;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+
+}
+
+
+/*----------------For Footer--------*/
+footer{
+    width:100%;
+    text-align: center;/*For aligning text at the end in center*/
+    justify-content: end;
+    color: #fc6e20;
+    background-color:rgba(0,0,0,0.6);;
+    padding: 20px;
+}
+
+#pageFooter a{
+    color:#fc6e20;
+}
+
+#pageFooter a:hover{
+    color: #fff;
+}
+
+
+.social-icons{  /*For fb insta link icons*/
+    margin:30px auto;
+    text-align:center;
+}
+
+.social-icons img{   /*For fb insta link icons*/
+    width: 50px;
+    margin:0 12px;
+    box-shadow:#fff;
+    cursor:pointer;
+    border-radius:30%;
+    border: #fff;
+}
